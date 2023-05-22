@@ -19,6 +19,7 @@ install.packages("ggthemes")
 install.packages("maps")
 install.packages("RColorBrewer")
 install.packages("rgbif")
+install.packages("colourpicker")
 
 #Cargar paquetes
 library(readr)
@@ -31,7 +32,7 @@ library(ggthemes)
 library(maps)
 library(RColorBrewer)
 library(rgbif)
-
+library(colourpicker)
 
 
 
@@ -126,9 +127,7 @@ save(LPI_models_pipes, file = "LPI_models_pipes.RData") #guarda como archivo R
 
 ##Visualizar los resultados de los modelos
 
-#Elegir colores
-install.packages("colourpicker")
-library(colourpicker)
+#Elegir colores con colorpicker
 c("#746580", "#BEA2E0BD", "#914ECC")
 #Configurar un función personalizada en ggplot2
 theme_LPI <- function(){
