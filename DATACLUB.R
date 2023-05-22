@@ -34,6 +34,7 @@ library(rgbif)
 
 
 
+
 #####Primera parte: formato de los datos#####
 #Cargar datos
 load("LPIdata_Feb2016.RData")
@@ -151,7 +152,7 @@ theme_LPI <- function(){
 biome.plots <- LPI_long %>%
   nest_by(genus_species_id, biome) %>% # Agrupar por especie y bioma
   mutate(mod =list(lm(scalepop ~ year, data = data)))%>% #Hacer el modelo lineal
-  reframe(tidy(mod)) %>%  # Extraer los coeficientes del modelo
+  reframe(tidy(mod)) %>%  # Extraer los coeficientes del modelo, puede ser necesario utilizas summarise
   dplyr::select(genus_species_id, biome, term, estimate) %>%  # Seleccionar solo columnas necesarias
   spread(term, estimate)  %>% # Separar los estimados en dos columanas - una para intercept, una para year
   unnest(cols = c(genus_species_id,biome)) %>% # Eliminar grupo
@@ -220,9 +221,7 @@ occur <- occ_search(scientificName = "Fratercula arctica",
                     year = '2006,2016', 
                     return = "data")
 str(occur)
-library(ggplot2)
-library(maps)
-library(ggthemes)
+##Mapa de ocurrencias
 
 (map <- ggplot(occur$data, aes(x = decimalLongitude, y = decimalLatitude)) + 
     # especificar solo presentar UK en el mapa
