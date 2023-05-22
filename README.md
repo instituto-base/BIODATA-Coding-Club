@@ -5,7 +5,9 @@ Esta sesión está basada en las sesiones propuestas por CODING CLUB y se puede 
 
 https://ourcodingclub.github.io/tutorials/seecc_1/
 
-En el enlace anterior se puede descargar los datos necesarios para trabajar en la sesión.
+Para descargar los datos necesarios para la sesión, debes ingresar al repositorio original dispuesto por CODING CLUB en el siguiente enlace:
+
+https://github.com/ourcodingclub/SEECC-workshop
 
 El script presentado en este repositorio corresponde a una modificación de aquellos que se presentan en CODING CLUB, adaptado para las necesidades de nuestra sesión.
 
