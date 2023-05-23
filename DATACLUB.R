@@ -6,32 +6,6 @@
 
 #Preparación
 
-setwd("C:/R/CLUB_large") #identificar carpeta
-
-#Instalar paquetes
-install.packages("readr")
-install.packages("tidyr")
-install.packages("dplyr")
-install.packages("broom")
-install.packages("ggplot2")
-install.packages("ggExtra")
-install.packages("ggthemes")
-install.packages("maps")
-install.packages("RColorBrewer")
-install.packages("rgbif")
-install.packages("colourpicker")
-
-#Cargar paquetes
-library(readr)
-library(tidyr)
-library(dplyr)
-library(broom)
-library(ggplot2)
-library(ggExtra)
-library(ggthemes)
-library(maps)
-library(RColorBrewer)
-library(rgbif)
 library(colourpicker)
 
 
